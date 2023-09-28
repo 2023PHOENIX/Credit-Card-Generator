@@ -1,42 +1,149 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+
+.app {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    align-content: center;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.card-front {
+    width: 415.581px;
+    height: 246.817px;
+    flex-shrink: 0;
+    background-image: url("/src/assets/images/Rectangle27.png");
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 10px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ellipse6 {
+    position: absolute;
+    width: 250px;
+    height: 118px;
+    transform: rotate(-10deg);
+    flex-shrink: 0;
+    left: -100px;
+    bottom: 100px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.ellipse3 {
+    position: absolute;
+    width: 300.363px;
+    height: 184.802px;
+    transform: rotate(330.616deg);
+    flex-shrink: 0;
+    border-radius: 60%;
+
+    background: radial-gradient(ellipse at center, rgba(234, 113, 103, 1) 10%, transparent 75%);
+    background-size: 200% 100%;
+    right: -30px;
+
 }
 
-.card {
-  padding: 2em;
+.ellipse4 {
+    position: absolute;
+    width: 380.921px;
+    height: 142.731px;
+    transform: rotate(-38.78deg);
+    flex-shrink: 0;
+    border-radius: 60%;
+
+    bottom: -50px;
+    left: -10px;
+    z-index: 2;
+    background: radial-gradient(ellipse at center, rgba(94, 144, 230, 1) 0%, transparent 70%);
+
 }
 
-.read-the-docs {
-  color: #888;
+.ellipse7 {
+    position: absolute;
+    width: 333.182px;
+    height: 127.662px;
+    transform: rotate(-45.651deg);
+    flex-shrink: 0;
+    border-radius: 60%;
+    /*background: #620594;*/
+    right: -120px;
+    bottom: -30px;
+    background: radial-gradient(ellipse at center, rgba(98, 5, 148, 1) 0%, transparent 70%);
+    background-size: 100% 100%;
+    z-index: 2;
+}
+
+.ellipse5 {
+    position: absolute;
+    width: 230.044px;
+    height: 85.929px;
+    transform: rotate(300.588deg);
+    flex-shrink: 0;
+
+    background: radial-gradient(ellipse at center, #CF56BD 10%, transparent 80%);
+    background-size: 200% 100%;
+    top: 0px;
+    right: 50px;
+    z-index: 2;
+}
+
+.credit-card-number {
+    position: absolute;
+
+    font-size: 32px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 4.68px;
+
+    bottom: 60px;
+    left: 30px;
+    z-index: 10;
+}
+
+.credit-card-holder-name {
+    position: absolute;
+    left : 30px;
+    bottom: 30px;
+    z-index: 5;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.47px;
+}
+
+.credit-card-expiry {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    z-index: 5;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.29px;
+}
+
+.circle-filled {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+}
+
+.circle-hollow {
+    position: absolute;
+    left: 120px;
+    top: 35px;
 }

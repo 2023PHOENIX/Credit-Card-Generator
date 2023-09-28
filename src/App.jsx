@@ -1,14 +1,12 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
 
+import "./App.css";
+import CreditCardFront from "./Components/CreditCardFront.jsx";
 function App() {
 
   return (
-    <>
-      Hello World
-    </>
+    <div className="app">
+      <CreditCardFront/>
+    </div>
   );
 }
 
