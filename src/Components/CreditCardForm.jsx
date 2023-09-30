@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from 'react';
-
-
+// 1233445677891123
 // rendered using prop drilling.
+
+import {ToastContainer, toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function CreditCardForm(props) {
     const [userInput, setUserInput] = useState({
@@ -56,7 +59,22 @@ function CreditCardForm(props) {
     const handleSubmit = (e) => {
 
         e.preventDefault();
-        if (errorChecks()) {
+        const notify = () => {
+
+            toast.success('Credit Card Successfully updated! 👍', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+
+            });
+        };
+        const noErr = errorChecks();
+        if (noErr) {
             const expiry = `${userInput.expiryMonth}/${userInput.expiryYear.substring(2)}`
             setCardDetails({
                 card_number: userInput.cardNumber,
@@ -64,6 +82,7 @@ function CreditCardForm(props) {
                 card_username: userInput.firstName,
                 card_expiry: expiry
             });
+            notify();
 
 
         }
@@ -101,7 +120,6 @@ function CreditCardForm(props) {
                     {err.cvcCode && <div className='error'>{err.cvcCode}</div>}
                 </div>
             </div>
-
             <button type='submit' onClick={handleSubmit} className='button-submit'>Confirm</button>
         </div>
     );

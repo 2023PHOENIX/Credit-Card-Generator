@@ -6,11 +6,14 @@ import ellipse5 from "../assets/images/Ellipse5.png";
 import ellipse6 from "../assets/images/Ellipse6.png";
 
 
+
 // TODO: Fix the color blur part
 function CreditCardFront(props) {
     // 1233445677891123
 
-    const {cardNumber,cardUser,cardExpiry} = props;
+
+
+    const {cardNumber, cardUser, cardExpiry} = props;
     return (
 
         <div className="credit-front">

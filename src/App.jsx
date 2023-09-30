@@ -3,7 +3,7 @@ import CreditCardFront from "./Components/CreditCardFront.jsx";
 import CreditCardBack from "./Components/CreditCardBack.jsx";
 import CreditCardForm from "./Components/CreditCardForm.jsx";
 import {useState} from "react";
-
+import {ToastContainer} from "react-toastify";
 
 
 function App() {
@@ -23,13 +23,18 @@ function App() {
                 <div className="left-side">
                     <div className='credit-info-front'>
 
+
+                    </div>
+                    <div className='credit-info-back'>
+
+
+                    </div>
+
+                    <div className='sticky-card'>
                         <CreditCardFront cardNumber={cardDetails.card_number}
                                          cardUser={cardDetails.card_username}
                                          cardExpiry={cardDetails.card_expiry}
                         />
-                    </div>
-                    <div className='credit-info-back'>
-
                         <CreditCardBack cardCvcCode={card_cvc}/>
                     </div>
                 </div>
@@ -42,7 +47,7 @@ function App() {
                     />
                 </div>
 
-
+                <ToastContainer/>
             </div>
 
         </>
