@@ -7,11 +7,13 @@ import ellipse6 from "../assets/images/Ellipse6.png";
 
 
 // TODO: Fix the color blur part
-function CreditCardFront() {
+function CreditCardFront(props) {
+    // 1233445677891123
 
+    const {cardNumber,cardUser,cardExpiry} = props;
     return (
 
-        <div className="card-front">
+        <div className="credit-front">
 
             <img src={whiteCircle} className='circle-filled'/>
             <img src={circle} className='circle-hollow'/>
@@ -21,13 +23,13 @@ function CreditCardFront() {
             <div className='ellipse7'/>
             <div className="ellipse3"/>
 
-            <div className='credit-card-number'>0000 0000 0000 0000</div>
+            <div className='credit-card-number'>{cardNumber.match(/.{1,4}/g).join(' ')}</div>
 
             <div className='credit-card-holder-name'>
-                JANE APPLESEED
+                {cardUser}
             </div>
             <div className='credit-card-expiry'>
-                00/00
+                {cardExpiry}
             </div>
         </div>
 

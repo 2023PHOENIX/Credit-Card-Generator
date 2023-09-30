@@ -1,11 +1,11 @@
 import React from 'react';
 
-function CreditCardBack() {
+function CreditCardBack(props) {
     return (
         <div className='credit-back'>
             <div className='black-strip'></div>
-            <div className='cvv-strip'>
-                000
+            <div className='cvc-strip'>
+                {props && props.cardCvcCode}
             </div>
 
             <div className='card-footer'>

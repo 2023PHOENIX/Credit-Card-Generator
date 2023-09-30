@@ -5,12 +5,143 @@
     justify-content: center;
 
     align-content: center;
-
+    height: 100vh;
+    width: 100vw;
 }
 
 
-.card-front {
-    width: 415.581px;
+.credit-info-front {
+    position: absolute;
+    left: 35%;
+    top: 15%;
+}
+
+.credit-info-back {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+}
+
+/*----------------------------------------------LEFT SIDE---------------------------------------------------*/
+.left-side {
+    width: 35%;
+    height: 100%;
+    overflow: visible;
+    background: radial-gradient(12.04% 28.41% at 52.64% 24.47%, rgba(78, 26, 69, 0.20) 0%, rgba(69, 20, 43, 0.20) 14.29%, rgba(69, 20, 43, 0.20) 28.57%, rgba(61, 14, 18, 0.20) 42.86%, rgba(61, 13, 15, 0.20) 57.14%, rgba(61, 13, 15, 0.20) 71.43%, rgba(61, 13, 15, 0.20) 85.71%, rgba(60, 13, 13, 0.20) 100%), linear-gradient(169deg, rgba(4, 31, 27, 0.98) 14.76%, #380C4A 25.62%, #3B0E46 29.25%, #3D0F42 33.37%, #441436 40.15%, #33254E 46.18%, #2B2D59 52.47%, #292654 57.59%, #271F4F 62.33%, #240D37 74.06%, #22052D 88.22%, #22052D 125.39%, #22052D 154.65%, #22052D 154.67%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+
+    position: relative;
+}
+
+
+::-webkit-input-placeholder { /* Edge */
+    padding: 10px;
+}
+
+.right-side {
+    width: 75%;
+    height: 100%;
+    background: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+
+}
+
+.user-form-input {
+    color: #BBB9BC;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.875px;
+}
+
+.input-area input {
+
+    width: 382px;
+    color: #BBB9BC;
+}
+
+.input-text {
+    color: #404040;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.86px;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    height: 44px;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.875px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    background: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.button-submit {
+    height: 44px;
+    width: 382px;
+    border-radius: 6px;
+    background: #220930;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.16px;
+}
+
+.second-input-area {
+    display: flex;
+    width: 40px;
+    gap: 10px;
+}
+
+.expiry-mm-dd {
+    display: flex;
+    gap: 10px;
+}
+
+.expiry-mm-dd input {
+    width: 100px;
+}
+
+.cvc-input input {
+    width: 150px;
+}
+
+/*----------------------------------------------Card Front-------------------------------------------------*/
+
+.credit-front {
+    width: 448px;
     height: 246.817px;
     flex-shrink: 0;
     background-image: url("/src/assets/images/Rectangle27.png");
@@ -148,7 +279,7 @@
     top: 35px;
 }
 
-/*------------------------------------------------------------------------*/
+/*------------------------------------BACK SIDE------------------------------------*/
 
 .credit-back {
     display: flex;
@@ -157,13 +288,13 @@
 
 
     width: 448px;
-    height: 246.817px;;
+    height: 246.817px;
 
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    /*background-color: #E9E8E9;*/
+    background: #D9D9D9;
     fill: linear-gradient(107deg, #FFF 0%, #D9D9D9 103.94%);
     filter: drop-shadow(10px 11px 62px rgba(0, 0, 0, 0.19));
 }
@@ -175,7 +306,7 @@
     background-color: black;
 }
 
-.cvv-strip {
+.cvc-strip {
     width: 361px;
     height: 38px;
     flex-shrink: 0;
@@ -317,4 +448,16 @@
     flex-shrink: 0;
     border-radius: 4px;
     background: #AEB5BD;
+}
+
+
+/*------------------error--------------*/
+
+.error {
+    color: #F81212;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
