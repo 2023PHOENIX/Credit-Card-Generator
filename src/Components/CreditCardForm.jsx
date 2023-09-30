@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
 
+// rendered using prop drilling.
+
 function CreditCardForm(props) {
     const [userInput, setUserInput] = useState({
         firstName: "",
