@@ -25,6 +25,8 @@ function CreditCardFront(props) {
             <div className='ellipse4'/>
             <div className='ellipse7'/>
             <div className="ellipse3"/>
+            
+            <div className="ellipse6"/>
 
             <div className='credit-card-number'>{cardNumber.match(/.{1,4}/g).join(' ')}</div>
 
